@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/EdgarFual/edgar-portfolio/static/css/main.fe44e4ec.css",
+    "main.js": "/EdgarFual/edgar-portfolio/static/js/main.730d60aa.js",
+    "static/js/453.dbad4d08.chunk.js": "/EdgarFual/edgar-portfolio/static/js/453.dbad4d08.chunk.js",
+    "static/media/p-vicariato.png": "/EdgarFual/edgar-portfolio/static/media/p-vicariato.909bfaca6905a58e8393.png",
+    "static/media/p-pdo.png": "/EdgarFual/edgar-portfolio/static/media/p-pdo.595dfb34530e766de725.png",
+    "static/media/color-sharp.png": "/EdgarFual/edgar-portfolio/static/media/color-sharp.bea361cfef80fefc2d1e.png",
+    "static/media/color-sharp2.png": "/EdgarFual/edgar-portfolio/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
+    "static/media/p-colegioweb.png": "/EdgarFual/edgar-portfolio/static/media/p-colegioweb.7363c79507f9f2947383.png",
+    "static/media/t5.png": "/EdgarFual/edgar-portfolio/static/media/t5.8dc448ea2fa0ca3f5dfe.png",
+    "static/media/p-blogcafe.png": "/EdgarFual/edgar-portfolio/static/media/p-blogcafe.a729a86ca08ce135f93a.png",
+    "static/media/p-memoriesback.png": "/EdgarFual/edgar-portfolio/static/media/p-memoriesback.980ae9d13301c8ab338e.png",
+    "static/media/p-inventariochul.png": "/EdgarFual/edgar-portfolio/static/media/p-inventariochul.3ed2ae4083a07cb97dd7.png",
+    "static/media/p-personal.png": "/EdgarFual/edgar-portfolio/static/media/p-personal.af2cd1ddb038e6cecd9c.png",
+    "static/media/p-insergeweb.png": "/EdgarFual/edgar-portfolio/static/media/p-insergeweb.3fb078d2bd57eb01222c.png",
+    "static/media/p-portafolio.png": "/EdgarFual/edgar-portfolio/static/media/p-portafolio.f665cbde7d88db64d1f9.png",
+    "static/media/CentraNo2-Bold.ttf": "/EdgarFual/edgar-portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/EdgarFual/edgar-portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/p-store.png": "/EdgarFual/edgar-portfolio/static/media/p-store.5ddf090b1914b3520b2e.png",
+    "static/media/CentraNo2-Book.ttf": "/EdgarFual/edgar-portfolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/p-flumovil.png": "/EdgarFual/edgar-portfolio/static/media/p-flumovil.5ed1a32dcc44e3b3845b.png",
+    "static/media/p-modelfree.png": "/EdgarFual/edgar-portfolio/static/media/p-modelfree.30c3278605b1f662a9a9.png",
+    "static/media/contact-img.svg": "/EdgarFual/edgar-portfolio/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
+    "static/media/revicons.eot": "/EdgarFual/edgar-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/EdgarFual/edgar-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/EdgarFual/edgar-portfolio/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/meter2.svg": "/EdgarFual/edgar-portfolio/static/media/meter2.1b8f416eccd1ee162218b8528a1c5cdc.svg",
+    "static/media/meter1.svg": "/EdgarFual/edgar-portfolio/static/media/meter1.c4085ff859afbd8488e9da47d4953850.svg",
+    "static/media/meter3.svg": "/EdgarFual/edgar-portfolio/static/media/meter3.2201f7e4df22bc4b08180210474f28cc.svg",
+    "static/media/logo.svg": "/EdgarFual/edgar-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/EdgarFual/edgar-portfolio/index.html",
+    "static/media/arrow2.svg": "/EdgarFual/edgar-portfolio/static/media/arrow2.3d9522b6fd8f2464b7200ebf2c1bb09a.svg",
+    "static/media/arrow1.svg": "/EdgarFual/edgar-portfolio/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
+    "main.fe44e4ec.css.map": "/EdgarFual/edgar-portfolio/static/css/main.fe44e4ec.css.map",
+    "main.730d60aa.js.map": "/EdgarFual/edgar-portfolio/static/js/main.730d60aa.js.map",
+    "453.dbad4d08.chunk.js.map": "/EdgarFual/edgar-portfolio/static/js/453.dbad4d08.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe44e4ec.css",
+    "static/js/main.730d60aa.js"
+  ]
+}
