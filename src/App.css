@@ -16,6 +16,17 @@
 }
 
 /************ Default Css ************/
+:root {
+  
+
+  --color-principal: #159105;
+  --color-secundario: #2a2b2a;      /* color de fondo o principal */
+  --color-texto: #242323;
+  --color-blanco: #ffffff;           /* color general del texto */
+  --color-texto-secundario: #000000;  /* para subtítulos o menos importante */
+  --color-negro: #000000; 
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,8 +42,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -90,16 +101,17 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #fafafa;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 8%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #000000 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -120,14 +132,15 @@ span.navbar-text {
 .social-icon a {
     width: 42px;
     height: 42px;
-    background: rgba(217, 217, 217, 0.1);
+    background: rgb(0, 0, 0);
     display: inline-flex;
     border-radius: 50%;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
-    line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative; /* importante para el ::before */
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 .social-icon a::before {
     content: "";
@@ -137,23 +150,25 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-	transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);
 }
-.social-icon a img {
-	width: 40%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
+.social-icon a svg {
+    width: 60%;          /* tamaño del icono dentro del círculo */
+    height: 60%;
+    z-index: 1;
+    color: white;        /* color inicial del icono */
+    transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+.social-icon a:hover svg {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #070707;
+  border: 1px solid #070707;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -169,7 +184,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: #159105;
   left: 0;
   top: 0;
   z-index: -1;
@@ -233,8 +248,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  padding: 260px 0 200px 0;
+  
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -243,8 +258,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--color-principal);
+  border: 4px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -258,14 +273,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #000000;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
 .banner button {
-  color: #fff;
+  color: #020202;
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
@@ -284,6 +299,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
+  width: 70%;
 }
 @keyframes updown {
     0% {
@@ -304,25 +320,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  scroll-margin-top: 200px; /* espacio desde el navbar */
 }
 .skill-bx {
-  background: #151515;
+  background-color: var(--color-negro);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
 }
 .skill h2 {
+  color: var(--color-blanco);
 	font-size: 45px;
 	font-weight: 700;
 }
+.skill h5 {
+  color: var(--color-blanco);
+	
+}
 .skill p {
-    color: #B8B8B8;
+    color: var(--color-blanco);
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
 }
+.skill img {
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(90deg);
+}
+
+
 .skill-slider {
   width: 80%;
   margin: 0 auto;
@@ -332,27 +359,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   margin: 0 auto 15px auto;
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: var(--color-blanco);
 }
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
+  color: var(--color-negro);
 }
 .project p {
-  color: #B8B8B8;
+  color: var(--color-negro);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -364,7 +385,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: var(--color-blanco);
+  border: 4px solid var(--color-principal);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
@@ -373,8 +395,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
+  border: 4px solid var(--color-principal);
   padding: 17px 0;
-  color: #fff;
+  color: var(--color-negro);
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -389,7 +412,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background-color: var(--color-principal);
     top: 0;
     left: 0;
     z-index: -1;
@@ -421,7 +444,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #36aa40 -5.91%, #ffffff 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -466,9 +489,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ contactanos Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background-color: var(--color-blanco);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -481,8 +504,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(12, 204, 12, 0.863);
+  border: 1px var(--color-principal);
   border-radius: 20px;
   color: #fff;
   margin: 0 0 8px 0;
@@ -493,8 +516,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
+  background-color: rgba(22, 230, 22, 0.767);
+  color: var(--color-negro);
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
@@ -508,7 +531,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button {
   font-weight: 700;
   color: #000;
-  background-color: #fff;
+  background-color: rgba(12, 204, 12, 0.863);
   padding: 14px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -539,17 +562,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Footer Css ************/
-.footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 .newsletter-bx {
-  background: #FFFFFF;
+  background-color: var(--color-blanco);
   border-radius: 55px;
-  color: #121212;
+  border: 3px solid var(--color-principal); /* borde negro de 3px */
+  color: var(--color-negro);
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
@@ -570,7 +588,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background-color: var(--color-principal);
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -599,7 +617,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 15px;
 }
 .new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background-color: var(--color-principal);
   padding: 20px 65px;
   color: #fff;
   font-weight: 500;
@@ -607,8 +625,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 15%;
+  padding-bottom: 10px; /* espacio dentro del footer */
+  /* o */
+ 
 }
+
 .footer p {
   font-weight: 400;
   font-size: 14px;
